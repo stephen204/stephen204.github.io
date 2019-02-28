@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<head>
+
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+<script src="/assets/jquery.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
+<style>
+
+body {
+  font-family: 'Staatliches', cursive;
+  margin: 0 auto;
+  max-width: 600px;
+  background: #900;
+  color: blue;
+}
+div {
+  height: 300px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+  color: blue;
+}
+h1 {
+  font-family:  'Indie Flower', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: yellow;
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: yellow;
+  margin: 0px 0 70px 0;
+}
+p {
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(1,5,7,1), rgba(3,5,3,.4));
+  background: -webkit-linear-gradient(bottom, rgba(25,44,122,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+  color: red;
+}
+
+small {
+  font-family: 'Indie Flower', cursive;
+  opacity: 0;
+  color:yellow;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+.first{
+}
+
+.second{
+}
+.dessert{
+}
+
+.price {
+  float: right;
+}
+ul {
+  padding: 10px;
+  background: rgba(3,100,555,0.5);
+  text-align: center;
+  }
+  li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+    } 
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+  ul {
+      padding: 10px;
+      background: rgba(3,100,555,0.5);
+      text-align: center;
+    }
+  li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+    } 
+ 
+  
+  
+  
+  
+}
+
+</style>
+
+</head>
+
+<body>
+
+ <ul>
+      
+      <li><button onclick= pizza()>Pizza</button></li>
+      <li><button onclick= specialty() > Specialty</button></li>
+      <li><button onclick= extras()>Extras</button></li>
+    </ul>
+
+<h1>Stephen's Pizzeria</h1>
+<h2>The Best Pizza in New York!</h2>
+
+<div id="food"> </div>
+
+<script>
+pizzaImages= [
+  'url("http://cdn-image.myrecipes.com/sites/default/files/styles/medium_2x/public/image/recipes/sl/03142008/pepperoni-pizza-sl-1599569-x.jpg?itok=3rGd4n8r")',
+  'url("https://www.cicis.com/media/1243/pizza_adven_zestypepperoni.png")',
+  'url("https://elementstark.com/woocommerce-extension-demos/wp-content/uploads/sites/2/2016/12/pizza.jpg")',
+]
+specialtyImages= [
+  'url("https://www.bosspizzaandchicken.com/wp-content/uploads/2015/11/The-Rancheroni1-720x340.jpg")',
+  'url("https://www.cicis.com/media/1172/pizza_trad_supreme_sm.png")',
+  'url("https://www.cicis.com/media/1167/pizza_trad_pepperonisausage_sm.png")',
+  ]
+extrasImages= [
+  'url("https://images-gmi-pmc.edge-generalmills.com/f0e69dd8-fb5e-41b1-8d3c-605c21987e5a.jpg")',
+  'url("https://135dip1kp5pb1hxer93f2f2i-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/Dominos-Bread-Bites.png")',
+  'url("https://www.cicis.com/media/1198/wings_hot.png")'
+  ]
+ 
+ pizzaDivs = [
+    '<div class="item"><p>Pepperoni Pizza <span class="price">$12</span><br /><small> Oven Baked thin crust topped with homemade tomato sauce. Fresh Pepperoni straight from the farms. Fresh Mozzerella cheese and you can also get our special cheeses!</small></p></div>',
+  '<div class="item"><p>Large Specialty Pizza <span class="price">$18</span><br /> <small>Large oven baked crust with homemade tomato garlic sauce. Topped with our special family recipe. Parmesean and mozzerella cheese. Also can be bought with sausage and bacon on it.</small></p></div>',
+  '<div class="item"><p>Cheese Bread <span class="price">$7</span><br /><small>  A delicious homemade bread, with large chunks of cheddar cheese. Pretty and delicious, this one adds jalapeno to the cheddar bread.</small></p></div>',
+] 
+extrasDivs = [
+  '<div class="item"><p>Cheese Bread <span class="price">$5         </span><br /><small> homemade bread with special cheese on it!</small></p></div>',
+  '<div class="item"><p>Bread bites<span class="price">$4          </span><br /> <small>garlic bread notes topped with shredded parmesean</small></p></div>',
+  '<div class="item"><p>Wings <span class="price">$7        </span><br /><small> Our special Flaming wings!</small></p></div>',
+] 
+specialtyDivs = [
+  '<div class="item"><p>Large Pepperoni Pizza <span class="price">$12</span><br /><small> Oven Baked thin crust topped with homemade tomato sauce. Fresh Pepperoni straight from the farms. Fresh Mozzerella cheese and you can also get our special cheeses!</small></p></div>',
+  '<div class="item"><p>Large Specialty Pizza <span class="price">$18</span><br /> <small>Large oven baked crust with homemade tomato garlic sauce. Topped with our special family recipe. Parmesean and mozzerella cheese. Also can be bought with sausage and bacon on it.</small></p></div>',
+  '<div class="item"><p>Hawaiian Pizza <span class="price">$20</span><br /><small> Large pineapple pizza with our hawaiian twist on it</small></p></div>',
+] 
+
+function pizza() {
+  pizza = document.getElementById("food")
+  pizza.innerHTML = ''
+  pizza.innerHTML += pizzaDivs[0]
+  pizza.innerHTML += pizzaDivs[1]
+  pizza.innerHTML += pizzaDivs[2]
+  //alert("Our handmade pizza!")
+  items = document.getElementsByClassName("item")
+  items[0].style.background = pizzaImages[0]
+  items[0].style.backgroundSize = '100% 100%'
+  items[1].style.background = pizzaImages[1]
+  items[1].style.backgroundSize = '100% 100%'
+  items[2].style.background = pizzaImages[2]
+  items[2].style.backgroundSize = '100% 100%'
+  }
+
+function specialty() {
+  large = document.getElementById("food")
+  large.innerHTML = ''
+  large.innerHTML += specialtyDivs[0]
+  large.innerHTML += specialtyDivs[1]
+  large.innerHTML += specialtyDivs[2]
+  //alert("Large Specialty Pizzas")
+  items = document.getElementsByClassName("item")
+  for (i=0; i<3; i=i+1) {
+    items[i].style.background = specialtyImages[i]
+    items[i].style.backgroundSize = '100% 100%'
+  }
+}
+
+function extras() {
+ extra= document.getElementById("food")
+  extra.innerHTML = '' 
+  extra.innerHTML += extrasDivs[0]
+  extra.innerHTML += extrasDivs[1]
+  extra.innerHTML += extrasDivs[2]
+  //alert("Wings, Cheesy Bread and many more")
+  items = document.getElementsByClassName("item")
+  for (i=0; i<3; i=i+1) {
+    items[i].style.background = extrasImages[i]
+    items[i].style.backgroundSize = '100% 100%'
+  }
+}
+    
+
+
+
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+
+</body>
+ 
