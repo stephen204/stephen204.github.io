@@ -159,19 +159,19 @@ extrasImages= [
   ]
  
  pizzaDivs = [
-    '<div class="item"><p>Pepperoni Pizza <span class="price">$12</span><br /><small> Oven Baked thin crust topped with homemade tomato sauce. Fresh Pepperoni straight from the farms. Fresh Mozzerella cheese and you can also get our special cheeses!</small></p></div>',
-  '<div class="item"><p>Large Specialty Pizza <span class="price">$18</span><br /> <small>Large oven baked crust with homemade tomato garlic sauce. Topped with our special family recipe. Parmesean and mozzerella cheese. Also can be bought with sausage and bacon on it.</small></p></div>',
-  '<div class="item"><p>Cheese Bread <span class="price">$7</span><br /><small>  A delicious homemade bread, with large chunks of cheddar cheese. Pretty and delicious, this one adds jalapeno to the cheddar bread.</small></p></div>',
+  '<div class="item" onclick=this.classList.toggle("show-description")><p>Pepperoni Pizza <span class="price">$12</span><br /><small> Oven Baked thin crust topped with homemade tomato sauce. Fresh Pepperoni straight from the farms. Fresh Mozzerella cheese and you can also get our special cheeses!</small></p></div>',
+  '<div class="item" onclick=this.classList.toggle("show-description")><p>Large Specialty Pizza <span class="price">$18</span><br /> <small>Large oven baked crust with homemade tomato garlic sauce. Topped with our special family recipe. Parmesean and mozzerella cheese. Also can be bought with sausage and bacon on it.</small></p></div>',
+  '<div class="item" onclick=this.classList.toggle("show-description")><p>Cheese Bread <span class="price">$7</span><br /><small>  A delicious homemade bread, with large chunks of cheddar cheese. Pretty and delicious, this one adds jalapeno to the cheddar bread.</small></p></div>',
 ] 
 extrasDivs = [
-  '<div class="item"><p>Cheese Bread <span class="price">$5         </span><br /><small> homemade bread with special cheese on it!</small></p></div>',
-  '<div class="item"><p>Bread bites<span class="price">$4          </span><br /> <small>garlic bread notes topped with shredded parmesean</small></p></div>',
-  '<div class="item"><p>Wings <span class="price">$7        </span><br /><small> Our special Flaming wings!</small></p></div>',
+  '<div class="item" onclick=this.classList.toggle("show-description")><p>Cheese Bread <span class="price">$5         </span><br /><small> homemade bread with special cheese on it!</small></p></div>',
+  '<div class="item" onclick=this.classList.toggle("show-description")><p>Bread bites<span class="price">$4          </span><br /> <small>garlic bread notes topped with shredded parmesean</small></p></div>',
+  '<div class="item" onclick=this.classList.toggle("show-description")><p>Wings <span class="price">$7        </span><br /><small> Our special Flaming wings!</small></p></div>',
 ] 
 specialtyDivs = [
-  '<div class="item"><p>Large Pepperoni Pizza <span class="price">$12</span><br /><small> Oven Baked thin crust topped with homemade tomato sauce. Fresh Pepperoni straight from the farms. Fresh Mozzerella cheese and you can also get our special cheeses!</small></p></div>',
-  '<div class="item"><p>Large Specialty Pizza <span class="price">$18</span><br /> <small>Large oven baked crust with homemade tomato garlic sauce. Topped with our special family recipe. Parmesean and mozzerella cheese. Also can be bought with sausage and bacon on it.</small></p></div>',
-  '<div class="item"><p>Hawaiian Pizza <span class="price">$20</span><br /><small> Large pineapple pizza with our hawaiian twist on it</small></p></div>',
+  '<div class="item" onclick=this.classList.toggle("show-description")><p>Large Pepperoni Pizza <span class="price">$12</span><br /><small> Oven Baked thin crust topped with homemade tomato sauce. Fresh Pepperoni straight from the farms. Fresh Mozzerella cheese and you can also get our special cheeses!</small></p></div>',
+  '<div class="item" onclick=this.classList.toggle("show-description")><p>Large Specialty Pizza <span class="price">$18</span><br /> <small>Large oven baked crust with homemade tomato garlic sauce. Topped with our special family recipe. Parmesean and mozzerella cheese. Also can be bought with sausage and bacon on it.</small></p></div>',
+  '<div class="item" onclick=this.classList.toggle("show-description")><p>Hawaiian Pizza <span class="price">$20</span><br /><small> Large pineapple pizza with our hawaiian twist on it</small></p></div>',
 ] 
 
 function pizza() {
@@ -221,9 +221,7 @@ function extras() {
 
 
 
-  $('div').on('click', function() {
-      $(this).toggleClass('show-description');
-  });
+ 
 </script>
 
 </body>
