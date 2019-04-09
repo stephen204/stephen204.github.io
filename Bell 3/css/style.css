@@ -5,14 +5,14 @@
     Author URL: https://bootstrapmade.com
 */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-family: 'Germania One', cursive;;
 }
 
 p {
   line-height: 1.55;
   color: green;
   font-size: 400;
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-family: 'Germania One', cursive;;
 }
 
 h1 {
@@ -567,7 +567,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   Call-to-action Styling
   ================================================== */
 .cta {
-  background-color: #199EB8;
+  background-color: green;
   padding: 25px 0;
 }
 
@@ -577,7 +577,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .cta h2,
 .cta p {
-  color: #fff;
+  color: red;
 }
 
 .cta p {
@@ -594,12 +594,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   Portfolio Styling
   ================================================== */
 .portfolio {
-  background-color: #edf6ff;
+  background-color: red;
   padding-bottom: 0;
 }
 
 .portfolio h2 {
-  color: #199EB8;
+  color: green;
   margin-bottom: 25px;
 }
 
@@ -646,12 +646,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .portfolio-grid .row > div .card .portfolio-over .card-title {
-  color: #fff;
+  color: red;
   font-size: 30px;
 }
 
 .portfolio-grid .row > div .card .portfolio-over .card-text {
-  color: #fff;
+  color: red;
   opacity: .75;
   padding: 0 45px;
 }
@@ -741,23 +741,23 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 15px 25px;
   position: relative;
   z-index: 9;
-  background-color: #fff;
+  background-color: yellow;
 }
 
 .team .card-title-wrap .card-title, .team .card-title-wrap .card-text {
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-family: 'Germania One', cursive;
   display: block;
   margin: 0;
 }
 
 .team .card-title-wrap .card-title {
   font-size: 24px;
-  color: #333;
+  color: red;
 }
 
 .team .card-title-wrap .card-text {
   font-size: 18px;
-  color: #999;
+  color: green;
 }
 
 /* ==================================================
@@ -769,7 +769,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #contact h2 {
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-family: 'Germania One', cursive;
   color: red;
 }
 
@@ -840,7 +840,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   Footer Styling
   ================================================== */
 .site-footer {
-  background-color: #111;
+  background-color: red;
   padding: 0;
 }
 
@@ -969,12 +969,3 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
   .site-footer .list-inline li {
     display: inline-block;
-  }
-}
-
-@media (max-width: 767px) {
-  .block {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-}
